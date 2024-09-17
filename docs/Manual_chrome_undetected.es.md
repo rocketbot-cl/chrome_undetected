@@ -4,7 +4,7 @@ Este módulo te permite automatizar Google Chrome en modo undetected
 
 *Read this in other languages: [English](Manual_chrome_undetected.md), [Português](Manual_chrome_undetected.pr.md), [Español](Manual_chrome_undetected.es.md)*
   
-![banner](imgs/Banner_chrome_undetected.png o jpg)
+![banner](imgs/Banner_chrome_undetected.jpg)
 ## Como instalar este módulo
   
 Para instalar el módulo en Rocketbot Studio, se puede hacer de dos formas:
