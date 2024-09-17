@@ -12,6 +12,16 @@ Para instalar o módulo no Rocketbot Studio, pode ser feito de duas formas:
 2. Automático: Ao entrar no Rocketbot Studio na margem direita você encontrará a seção **Addons**, selecione **Install Mods**, procure o módulo desejado e aperte instalar.  
 
 
+
+## Como usar este módulo
+
+Este módulo **NÃO** utiliza os drivers da localização padrão do Rocketbot, mas os baixa automaticamente. Portanto, é necessário ter uma conexão com a internet para baixar os drivers. Caso o ambiente onde o robô será executado apresente bloqueios de rede, os seguintes links devem ser habilitados para que o download do driver seja bem-sucedido:
+
+- https://storage.googleapis.com/* (URL para baixar os drivers)
+- https://googlechromelabs.github.io/chrome-for-testing/* (URL para verificar a versão dos drivers)
+
+O caminho onde os drivers são baixados é o seguinte:
+`C:\Users\<usuário>\.wdm\drivers\chromedriver\win64\<versão>`
 ## Descrição do comando
 
 ### Abrir Navegador
