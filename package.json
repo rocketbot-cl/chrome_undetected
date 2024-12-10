@@ -78,9 +78,9 @@
                             "pr": "Porta"
                         },
                         "help": {
-                            "es": "Puerto que usará el navegador. Por defecto 5002",
-                            "en": "Port to use in the browser. Default 5002",
-                            "pr": "Porta a ser usada no navegador. Padrão 5002"
+                            "es": "Puerto que usará el navegador. Por defecto 5002. No usar el mismo puerto que utiliza Rocketbot para el desarrollo.",
+                            "en": "Port to use in the browser. Default 5002. Do not use the same port that Rocketbot uses for development.",
+                            "pr": "Porta a ser usada no navegador. Padrão 5002. Não usar a mesma porta que o Rocketbot usa para desenvolvimento."
                         },
                         "id": "port",
                         "css": "col-md-6",
