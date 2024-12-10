@@ -26,7 +26,7 @@ Para instalar librerias se debe ingresar por terminal a la carpeta "libs"
 
 import sys
 import os
-import psutil # type: ignore
+import psutil
 
 base_path = tmp_global_obj["basepath"] # type: ignore
 cur_path = os.path.join(base_path, 'modules', 'chrome_undetected', 'libs')
@@ -48,6 +48,7 @@ PrintException = PrintException # type: ignore
 
 web = GetGlobals('web')
 module = GetParams("module")
+global mod_undetected_chrome
 
 
 
@@ -63,10 +64,12 @@ if module == "open_browser":
 
     url = GetParams("url")
     profile_folder = GetParams("profile_folder") if GetParams("profile_folder") else base_path + "/modules/chrome_undetected/default_profile"
+    port = GetParams("port") if GetParams("port") else "5002"
+
     try:
-        undetected_chrome = UndetectedBrowser(profile_folder)
+        mod_undetected_chrome = UndetectedBrowser(profile_folder, port)
         
-        browser_driver = undetected_chrome.open()
+        browser_driver = mod_undetected_chrome.open()
 
         web.driver_list[web.driver_actual_id] = browser_driver
 
@@ -96,6 +99,18 @@ if module == "close_browser":
             traceback.print_exc()
             raise e
         
+if module == "wait_for_object":
+    data = GetParams("data")
+    data_type = GetParams("data_type")
+    wait_max = GetParams("wait_max")
+    condition = GetParams("condition")
+    result = GetParams("result")
 
-if cur_path in sys.path:
-    sys.path.remove(cur_path)
+    try:
+        founded = mod_undetected_chrome.wait_for_object(data, data_type, condition, wait_max)
+        SetVar(result, founded)
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        SetVar(result, False)
+        raise e
