@@ -32,7 +32,7 @@ class UndetectedBrowser:
             return None
 
     def launch_browser(self):
-        command = f'{self.browser_path} --remote-debugging-port={self.port} --user-data-dir="{self.profile_path}'
+        command = f'{self.browser_path} --remote-debugging-port={self.port} --user-data-dir="{self.profile_path}"'
         subprocess.Popen(command, shell=True)
 
     def open(self):
