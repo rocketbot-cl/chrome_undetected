@@ -14,7 +14,7 @@
     "mac": false,
     "docker": false,
     "name": "chrome_undetected",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "dependencies": {},
     "title": {
         "en": "chrome_undetected",
