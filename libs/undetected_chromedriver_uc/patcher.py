@@ -17,8 +17,10 @@ import time
 from urllib.request import urlopen
 from urllib.request import urlretrieve
 import zipfile
-from multiprocessing import Lock
-
+if sys.platform == "darwin":
+    from threading import Lock
+else:
+    from multiprocessing import Lock
 logger = logging.getLogger(__name__)
 
 IS_POSIX = sys.platform.startswith(("darwin", "cygwin", "linux", "linux2"))
