@@ -11,10 +11,10 @@
     "homepage": "http://rocketbot.com/",
     "linux": false,
     "windows": true,
-    "mac": false,
+    "mac": true,
     "docker": false,
     "name": "chrome_undetected",
-    "version": "1.1.2",
+    "version": "1.2.2",
     "dependencies": {},
     "title": {
         "en": "chrome_undetected",
@@ -283,10 +283,7 @@
                             "pr": "Aguardar Máximo (segundos)"
                         },
                         "id": "wait_max",
-                        "css": "col-md-6",
-                        "data_type": "str",
-                        "default": null,
-                        "required": true
+                        "css": "col-md-6"
                     },
                     {
                         "type": "input",
@@ -305,7 +302,8 @@
                         "css": "col-md-12",
                         "data_type": "str",
                         "default": null,
-                        "required": true
+                        "required": true,
+                        "remove_vars": true
                     }
                     
                 ]
