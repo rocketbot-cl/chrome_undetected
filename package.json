@@ -283,10 +283,7 @@
                             "pr": "Aguardar Máximo (segundos)"
                         },
                         "id": "wait_max",
-                        "css": "col-md-6",
-                        "data_type": "str",
-                        "default": null,
-                        "required": true
+                        "css": "col-md-6"
                     },
                     {
                         "type": "input",
@@ -305,7 +302,8 @@
                         "css": "col-md-12",
                         "data_type": "str",
                         "default": null,
-                        "required": true
+                        "required": true,
+                        "remove_vars": true
                     }
                     
                 ]

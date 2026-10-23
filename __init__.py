@@ -102,7 +102,7 @@ if module == "close_browser":
 if module == "wait_for_object":
     data = GetParams("data")
     data_type = GetParams("data_type")
-    wait_max = GetParams("wait_max")
+    wait_max = GetParams("wait_max") if GetParams("wait_max") else 0
     condition = GetParams("condition")
     result = GetParams("result")
 
